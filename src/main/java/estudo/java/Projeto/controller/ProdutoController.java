@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/produto")
 public class ProdutoController {
 
     @PostMapping("/salvar")
-    public void salvar (@RequestBody Produto produto){
+    public Produto salvar(@RequestBody Produto produto){
         System.out.println("Produto recebido:" + produto);
-
+     return produto;
     }
 
 }
